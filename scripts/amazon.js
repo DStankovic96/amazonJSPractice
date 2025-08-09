@@ -1,6 +1,7 @@
 
 import {cart, add_to_cart, total_quantity} from '../data/cart.js';
 import {products} from '../data/products.js'
+import { calculatePrice } from './funkcije.js';
 
 let productsHTML = '';
 
@@ -26,7 +27,7 @@ products.forEach((product)=>{
           </div>
 
           <div class="product-price">
-            $${(product.priceCents/100).toFixed(2)}
+            $${calculatePrice(product.priceCents)}
           </div>
 
           <div class="product-quantity-container">

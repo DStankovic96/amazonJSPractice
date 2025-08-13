@@ -2,7 +2,7 @@
 import {products} from '../data/products.js'
 
 export function calculatePrice(c){
-    return ((c/100).toFixed(2));
+    return (Math.round(c)/100).toFixed(2);
 }
 
 export function findItem(c){
